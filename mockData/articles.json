@@ -1,0 +1,5 @@
+{
+    "enTitle": "Use Async/Await to solve callback hell perfectly",
+    "cnTitle": "使用Async/Await 完美解决回调地狱",
+    "content": "babel-core babel-preset-2015 babel-preset-stage-3 babel-plugin-transform-runtime"
+}
