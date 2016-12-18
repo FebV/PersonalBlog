@@ -4,6 +4,7 @@ source code of my personal blog in future, build on a mordern skill stack
 using nodejs/koa2 on server side(to be built)  
 using react on frontend  
 using material-ui on frontend  
+using flex layout  
 using fetch api instead of xhr  
 using mock system to offline debug  
 using self-build DataController to manage data tree  
