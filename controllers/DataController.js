@@ -24,6 +24,7 @@ export default class DataController {
         if(this.mode === 'fake')
             return [
                 {
+                    // image: '/images/selfie.jpg',
                     title: 'First article',
                     content: 'there is actually nothing'
                 },

@@ -15,7 +15,8 @@ export default class ArticleList extends React.Component {
 
     tweakPage() {
         this.style = {
-            width: '50%'
+            width: '50%',
+            height: '50%'
         }
     }
 
@@ -29,7 +30,7 @@ export default class ArticleList extends React.Component {
         return (
             <div style={this.style}>
                 {this.state.articleList.map((ele, index) => {
-                    return <ArticleInfo key={index} image="" title={ele.title} content={ele.content} />;
+                    return <ArticleInfo key={index} image={ele.image} title={ele.title} content={ele.content} />;
                 })}
             </div>
         );

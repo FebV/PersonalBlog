@@ -9,14 +9,14 @@ export default class ArticleInfo extends React.Component {
         this.image = null;
         if(this.props.image)
             this.image = <CardMedia>
-                        <img src={this.props.image} />
+                        <img src={this.props.image} style={{minWidth: '0px', height: '45%'}}/>
                     </CardMedia>;
         this.style = {};
         this.tweakPage();
     }
 
     tweakPage() {
-
+        this.style.width = '50%';
     }
 
     render() {
