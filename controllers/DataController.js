@@ -14,10 +14,23 @@ export default class DataController {
 
     async getPersonalInfo() {
         if(this.mode === 'fake')
-            return {name: 'Zhao Yifan'};
+            return {image: 'images/selfie.jpg', name: 'Zhao Yifan', birth: '1996 / 02', education: 'Shandong University', major: 'Software Engineering'};
         if(this.mode === 'mock') {
-            let result = await this.networkController.request('mockData/personalInfo.json')
-            console.log(result);
+            return await this.networkController.request('mockData/personalInfo.json')
+        }
+    }
+
+    async getArticleList() {
+        if(this.mode === 'fake')
+            return [
+                {
+                    title: 'First article',
+                    content: 'there is actually nothing'
+                },
+                {title: '第二篇'}
+            ];
+        if(this.mode === 'mock') {
+            return await this.networkController.request('mockData/personalInfo.json')
         }
     }
 }
@@ -27,7 +40,6 @@ class NetworkController {
     }
 
     async request(url) {
-        console.log('request');
         let result = null;
         await fetch(url)
                 .then(res => res.json())

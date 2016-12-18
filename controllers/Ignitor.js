@@ -3,8 +3,8 @@ import DataController from './DataController';
 
 class Ignitor {
     constructor() {
-        this.responsiveController = new ResponsiveController();
-        this.dataController = new DataController();
+        this.page = new ResponsiveController();
+        this.data = new DataController();
         console.log('Ignitor init');
     }
 }

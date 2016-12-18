@@ -1,3 +1,7 @@
 {
-    "qwe": "asd"
+    "image": "/images/selfie.jpg",
+    "name": "Zhao Yifan",
+    "birth": "1996 / 02",
+    "education": "Shandong University",
+    "major": "Software Engineering"
 }

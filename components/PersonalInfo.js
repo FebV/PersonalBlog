@@ -7,27 +7,44 @@ import ignitor from '../controllers/Ignitor';
 export default class PersonalInfo extends React.Component{
     constructor(props) {
         super(props);
-        this.style = {};
-        if(ignitor.responsiveController.direction === 'landscape') {
-            this.style.width = '25%';
+        this.state = {
+            pi: {
+                image: null,
+                name: '',
+            }
+        };
+        this.style = {};        
+        this.tweakPage();
+        this.getPersonalInfo();
+    }
+
+    tweakPage() {
+        if(ignitor.page.direction === 'landscape') {
+            this.style.width = '20%';
         }
     }
+
+    async getPersonalInfo() {
+        const pi = await ignitor.data.getPersonalInfo();
+        this.setState({pi});
+    }
+
 
     render() {
         return (
             <MuiThemeProvider>
             <Card style={this.style}>
                 <CardMedia>
-                    <img src="images/selfie.jpg" />
+                    <img src={this.state.pi.image} />
                 </CardMedia>
                 <CardTitle
                     title="Personal Info"
                 />
                 <CardText>
-                <p>Zhao Yifan</p>
-                <p>1996 / 02</p>
-                <p>Studying in <a href="http://www.sdu.edu.cn/">Shandong University</a></p>
-                <p>Major in Software Engineering</p>
+                <p>{this.state.pi.name}</p>
+                <p>{this.state.pi.birth}</p>
+                <p>{this.state.pi.education}</p>
+                <p>{this.state.pi.major}</p>
                 </CardText>
             </Card>
             </MuiThemeProvider>
