@@ -1,8 +1,10 @@
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import React from "react";
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
 import PersonalInfo from './components/PersonalInfo';
 import ArticleList from './components/ArticleList';
+import ArticleDetail from './components/ArticleDetail';
 import ignitor from './controllers/Ignitor';
 
 injectTapEventPlugin();
@@ -36,5 +38,13 @@ class App extends React.Component {
 
 console.log(ignitor.page.direction);
 
+const li = () => <Link to={`/articles/1`}>link</Link>
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    (
+        <Router history={browserHistory}>
+        <Route path="/" component={App} />
+        <Route path="articles/:articleId" component={ArticleDetail} />
+        </Router>
+    ),
+    document.getElementById('root'));

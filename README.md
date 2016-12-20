@@ -5,10 +5,11 @@ using nodejs/koa2 on server side(to be built)
 using react on frontend  
 using material-ui on frontend  
 using flex layout  
+using react-router to build SPA  
 using fetch api instead of xhr  
 using mock system to offline debug  
 using self-build DataController to manage data tree  
-using webpack HMR
+using webpack HMR  
 using babel  
 fully es6+  
 fully using async/await instead of callback or promise or generator, in both sides  

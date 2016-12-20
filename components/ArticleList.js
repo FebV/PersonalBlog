@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleInfo from './ArticleInfo';
 import ignitor from '../controllers/Ignitor';
+import { Link } from 'react-router';
 
 export default class ArticleList extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ export default class ArticleList extends React.Component {
         return (
             <div style={this.style}>
                 {this.state.articleList.map((ele, index) => {
-                    return <ArticleInfo key={index} image={ele.image} title={ele.title} time={ele.time} />;
+                    return <Link key={1} to={`articles/1`}><ArticleInfo key={ele.id} image={ele.image} title={ele.title} time={ele.time}/></Link>;
                 })}
             </div>
         );
