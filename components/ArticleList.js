@@ -30,7 +30,7 @@ export default class ArticleList extends React.Component {
         return (
             <div style={this.style}>
                 {this.state.articleList.map((ele, index) => {
-                    return <ArticleInfo key={index} image={ele.image} title={ele.title} content={ele.content} />;
+                    return <ArticleInfo key={index} image={ele.image} title={ele.title} time={ele.time} />;
                 })}
             </div>
         );

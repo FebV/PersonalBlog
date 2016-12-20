@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import ignitor from '../controllers/Ignitor';
 
 
 export default class ArticleInfo extends React.Component {
@@ -16,7 +17,6 @@ export default class ArticleInfo extends React.Component {
     }
 
     tweakPage() {
-        this.style.width = '50%';
     }
 
     render() {
@@ -26,7 +26,7 @@ export default class ArticleInfo extends React.Component {
                 {this.image}
                 <CardTitle title={this.props.title} />
                 <CardText>
-                    {this.props.content}
+                    {ignitor.util.unixToReadableTime(this.props.time)}
                 </CardText>
             </Card>
             </MuiThemeProvider>

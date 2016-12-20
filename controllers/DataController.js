@@ -14,7 +14,14 @@ export default class DataController {
 
     async getPersonalInfo() {
         if(this.mode === 'fake')
-            return {image: 'images/selfie.jpg', name: 'Zhao Yifan', birth: '1996 / 02', education: 'Shandong University', major: 'Software Engineering'};
+            return {
+                image: 'images/selfie.jpg',
+                name: 'Zhao Yifan',
+                birth: '1996 / 02',
+                education: 'Shandong University',
+                major: 'Software Engineering',
+                email: 'cn.zhaoyifan@gamil.com'
+            };
         if(this.mode === 'mock') {
             return await this.networkController.request('mockData/personalInfo.json')
         }
@@ -25,10 +32,10 @@ export default class DataController {
             return [
                 {
                     // image: '/images/selfie.jpg',
-                    title: 'First article',
-                    content: 'there is actually nothing'
-                },
-                {title: '第二篇'}
+                    title: 'skill behind this website',
+                    time: '1482154428',
+                    url: '/mockData/skillBehind.json'
+                }
             ];
         if(this.mode === 'mock') {
             return await this.networkController.request('mockData/personalInfo.json')
