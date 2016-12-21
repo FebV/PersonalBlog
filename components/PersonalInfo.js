@@ -49,6 +49,7 @@ export default class PersonalInfo extends React.Component{
                 <p>{this.state.pi.education}</p>
                 <p>{this.state.pi.major}</p>
                 <p>{this.state.pi.email}</p>
+                <p>{this.state.pi.github}</p>
                 </CardText>
             </Card>
             </MuiThemeProvider>
