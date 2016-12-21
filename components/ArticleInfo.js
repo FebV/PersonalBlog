@@ -24,7 +24,7 @@ export default class ArticleInfo extends React.Component {
             <MuiThemeProvider>
             <Card style={this.style}>
                 {this.image}
-                <CardTitle title={this.props.title} />
+                <h1><CardTitle title={this.props.title} /></h1>
                 <CardText>
                     {ignitor.util.unixToReadableTime(this.props.time)}
                 </CardText>
