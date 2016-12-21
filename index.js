@@ -6,6 +6,7 @@ import PersonalInfo from './components/PersonalInfo';
 import ArticleList from './components/ArticleList';
 import ArticleDetail from './components/ArticleDetail';
 import ignitor from './controllers/Ignitor';
+import './static/main.css';
 
 injectTapEventPlugin();
 
@@ -47,4 +48,5 @@ ReactDOM.render(
         <Route path="articles/:articleId" component={ArticleDetail} />
         </Router>
     ),
-    document.getElementById('root'));
+    document.getElementById('root')
+);
