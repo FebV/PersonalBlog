@@ -15,7 +15,7 @@ Single Page Application is a new word and it will be the future. It can leave th
 #### Fetch API
 Using Fetch could feel super fly. One line code could tell anything.
 ```
-fetch( res => res.json()).then( json => {anything()});
+fetch( 'someurl' ).then( res => res.json() ).then( json => { anything() } );
 ```  
 I think it's elegant enough to beat $.ajax().
 ## Frontend Archtecture
