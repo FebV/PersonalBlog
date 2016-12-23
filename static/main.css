@@ -2,9 +2,7 @@
     font-family: Roboto;
     src: url(Roboto-Light.ttf);
 }
-html,body {
-    font-family: Roboto sans-serif;
-}
+
 a {
     text-decoration: none;
 }
