@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import PersonalInfo from './components/PersonalInfo';
 import ArticleList from './components/ArticleList';
-import ArticleDetail from './components/ArticleDetail';
+import ArticlePage from './components/ArticlePage';
 import ignitor from './controllers/Ignitor';
 import './static/main.css';
+import './static/mui.css';
 
 injectTapEventPlugin();
 
@@ -45,7 +46,7 @@ ReactDOM.render(
     (
         <Router history={browserHistory}>
         <Route path="/" component={App} />
-        <Route path="articles/:articleId" component={ArticleDetail} />
+        <Route path="articles/:articleId" component={ArticlePage} />
         </Router>
     ),
     document.getElementById('root')

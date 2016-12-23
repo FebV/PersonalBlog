@@ -3,6 +3,7 @@ import ignitor from '../controllers/Ignitor';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {markdown} from 'markdown';
+import BackToIndex from './BackToIndex';
 
 export default class ArticleDetail extends React.Component {
     constructor(props) {
