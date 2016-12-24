@@ -20,7 +20,11 @@ export default class BackToIndex extends React.Component{
                     position: "relative",
                     right: 7,
                     bottom: 8,
-                    hoverColor: greenA200
+                    hoverColor: greenA200,
+                    zIndex: 10
+                }}
+                style={{
+                    zIndex: 10
                 }}
                 className="back-to-home"
                 touch={true}

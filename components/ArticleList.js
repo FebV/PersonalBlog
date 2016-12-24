@@ -15,6 +15,8 @@ export default class ArticleList extends React.Component {
     }
 
     tweakPage() {
+        const dir = ignitor.page.direction;
+        if(dir === 'landscape')
         this.style = {
             width: '50%',
             height: '50%'

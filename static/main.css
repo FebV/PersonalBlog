@@ -2,6 +2,20 @@
     font-family: Roboto;
     src: url(Roboto-Light.ttf);
 }
+@media (orientation: landscape) {
+    body {
+        background-image:url('/images/background.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        background-image: url('/images/mob-background.png');
+        background-size: cover;
+    }
+}
 
 a {
     text-decoration: none;

@@ -1,6 +1,9 @@
 export default class ResponsiveController {
     constructor() {
-        this.direction = 'landscape';
+        if(matchMedia('(orientation:landscape)').matches === true)
+            this.direction = 'landscape';
+        else
+            this.direction = 'portrait';
     }
 
 }

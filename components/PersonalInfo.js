@@ -14,16 +14,22 @@ export default class PersonalInfo extends React.Component{
                 birth: 'no birth',
                 education: 'no education',
                 email: 'no email'
-            }
+            },
         };
-        this.style = {};        
+        this.img = null;
+        this.dir = 'portrait';
+        this.style = {};
         this.tweakPage();
         this.getPersonalInfo();
     }
 
     tweakPage() {
-        if(ignitor.page.direction === 'landscape') {
+        const dir = ignitor.page.direction;
+        this.dir = dir;
+        if(dir === 'landscape') {
             this.style.width = '20%';
+        }
+        if(dir === 'portrait') {
         }
     }
 
@@ -34,15 +40,20 @@ export default class PersonalInfo extends React.Component{
 
 
     render() {
+        let result = null;
+        if(this.dir === 'landscape')
+            result =    <div>
+                        <CardMedia>
+                            <img src={this.state.pi.image} />
+                        </CardMedia>
+                        <CardTitle title="Personal Info" />
+                        </div>;
+        else
+            result = <CardHeader avatar={this.state.pi.image} title="Personal Info"/>;
         return (
             <MuiThemeProvider>
-            <Card style={this.style}>
-                <CardMedia>
-                    <img src={this.state.pi.image} />
-                </CardMedia>
-                <CardTitle
-                    title="Personal Info"
-                />
+            <Card >
+                {result}
                 <CardText>
                 <p>{this.state.pi.name}</p>
                 <p>{this.state.pi.birth}</p>

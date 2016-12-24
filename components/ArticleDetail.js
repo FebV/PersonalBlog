@@ -20,9 +20,12 @@ export default class ArticleDetail extends React.Component {
     }
 
     tweakPage() {
-        this.style = {
-            width: '50%',
-        }
+        const dir = ignitor.page.direction;
+        this.dir = dir;
+        if(dir === 'landscape')
+            this.style = {
+                width: '50%',
+            }
     }
 
     async getArticleDetail() {

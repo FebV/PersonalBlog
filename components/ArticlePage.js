@@ -4,7 +4,7 @@ import BackToIndex from './BackToIndex';
 
 const ArticlePage = () => (
     <div>
-        <BackToIndex style={{}} />
+        <BackToIndex />
         <ArticleDetail />
     </div>
 )
