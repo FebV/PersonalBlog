@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: __dirname + "/dist",
-        publicPath: '/'
+        publicPath: '/dist/'
     },
     devServer: {
         host: '0.0.0.0',
@@ -35,6 +35,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        //new webpack.optimize.UglifyJsPlugin()
     ],
 }
