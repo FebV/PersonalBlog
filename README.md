@@ -15,7 +15,8 @@ fully es6+
 fully using async/await instead of callback or promise or generator, in both sides  
 using polyfill modules to adapt to old browsers  
 fully responsive  
-fully modulize    
+fully modulize  
+using CDN via su.baidu.com  
 
 ## build 
 npm install  
