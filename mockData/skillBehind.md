@@ -27,3 +27,8 @@ I miss the old days when there is MV* on Frontend, React take off MV, I write th
 All data that present at pages stored in .json files in the mockData/ folder, when the mode in controllers/config.js is turned to 'mock', Data Controller will read data from these json files. Server side APIs are identical to these json files, so without any pain frontend can connect to a real server side.
 #### Responsive Controller
 When the page finished loading, a responsive controller starts to initialize, it records the current visiter's screen type, components could adjust style rely on the type that responsive controller provide.
+## Speedup Tech
+#### Webpack Uglify
+webpack Uglify plugin can compress js into a one-line flie, remove all needless space & return symbol. In my case, the original bundle.js weight 1.9M, after minimizing it turned to about 800k, which means visitor can open the website as twice fast as normal.  
+#### Content Delivery Network
+As this website's server is in USA, if a visitor located in China wants to visit it, it can take a huge wait-time during transport from USA to China, across Pacific Ocean. So deploying a CDN in China could be a decent choice for the convience to visitors from China. I use the service provided by su.baidu.com, works effciently.
