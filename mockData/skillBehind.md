@@ -13,9 +13,11 @@ The best tool I have ever used. It helps me to slove the most parts of boring ta
 #### React-router
 Single Page Application is a new word and it will be the future. It can leave the server side to be a pure api provider.although it could bring the SEO problem, we can build a set of server-render page later.
 #### Fetch API
-Using Fetch could feel super fly. One line code could tell anything.
+Using Fetch could feel super fly. The code below could tell anything.
 ```
-fetch( 'someurl' ).then( res => res.json() ).then( json => { anything() } );
+fetch( 'someurl' )
+    .then( res => res.json() )
+    .then( json => { anything() } );
 ```  
 I think it's elegant enough to beat $.ajax().
 ## Frontend Archtecture

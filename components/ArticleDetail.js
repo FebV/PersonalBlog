@@ -24,7 +24,7 @@ export default class ArticleDetail extends React.Component {
         this.dir = dir;
         if(dir === 'landscape')
             this.style = {
-                width: '50%',
+                width: '70%',
             }
     }
 

@@ -7,6 +7,7 @@ import ArticlePage from './components/ArticlePage';
 import ignitor from './controllers/Ignitor';
 import './static/main.css';
 import './static/mui.css';
+import 'whatwg-fetch';
 
 injectTapEventPlugin();
 
