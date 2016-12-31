@@ -30,4 +30,6 @@ When the page finished loading, a responsive controller starts to initialize, it
 #### Webpack Uglify
 webpack Uglify plugin can compress js into a one-line flie, remove all needless space & return symbol. In my case, the original bundle.js weight 1.9M, after minimizing it turned to about 800k, which means visitor can open the website as twice fast as normal.  
 #### Content Delivery Network
-As this website's server is in USA, if a visitor located in China wants to visit it, it can take a huge wait-time during transport from USA to China, across Pacific Ocean. So deploying a CDN in China could be a decent choice for the convience to visitors from China. I use the service provided by su.baidu.com, works effciently.
+As this website's server is in USA, if a visitor located in China wants to visit it, it can take a huge wait-time during transport from USA to China, across Pacific Ocean. So deploying a CDN in China could be a decent choice for the convience to visitors from China. I use the service provided by su.baidu.com, works effciently.  
+#### Gzip
+With the help of Nginx's Gzip, the weight of my cumbersome bundle.js is reduced to 130K, it's almost acceptable even on mobile phone, and will save the bandwidth of server too.  
