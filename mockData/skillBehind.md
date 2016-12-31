@@ -11,13 +11,12 @@ The Async/Await can save the callback hell perfectly, but it can only be used in
 #### Webpack and its dev-server
 The best tool I have ever used. It helps me to slove the most parts of boring tasks. I will write an article later to talk about this amazing tool with babel.
 #### React-router
-Single Page Application is a new word and it will be the future. It can leave the server side to be a pure api provider.although it could bring the SEO problem, we can build a set of server-render page later.
+Single Page Application is a new word and it will be the future. It can leave the server side to be a pure APIs provider.although it could bring the SEO problem, we can build a set of server-render page later.
 #### Fetch API
 Using Fetch could feel super fly. The code below could tell anything.
-```
-fetch( 'someurl' )
-    .then( res => res.json() )
-    .then( json => { anything() } );
+``` fetch( 'someurl' )
+        .then( res => res.json() )
+        .then( json => { anything() } );
 ```  
 I think it's elegant enough to beat $.ajax().
 ## Frontend Archtecture

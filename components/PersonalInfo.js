@@ -17,7 +17,6 @@ export default class PersonalInfo extends React.Component{
             },
         };
         this.img = null;
-        this.dir = 'portrait';
         this.style = {};
         this.tweakPage();
         this.getPersonalInfo();
@@ -52,7 +51,7 @@ export default class PersonalInfo extends React.Component{
             result = <CardHeader avatar={this.state.pi.image} title="Personal Info"/>;
         return (
             <MuiThemeProvider>
-            <Card >
+            <Card style={this.style}>
                 {result}
                 <CardText>
                 <p>{this.state.pi.name}</p>
