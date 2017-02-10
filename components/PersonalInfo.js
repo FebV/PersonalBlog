@@ -10,10 +10,10 @@ export default class PersonalInfo extends React.Component{
         this.state = {
             pi: {
                 image: null,
-                name: 'no name',
-                birth: 'no birth',
-                education: 'no education',
-                email: 'no email'
+                name: '',
+                birth: '',
+                education: '',
+                email: ''
             },
         };
         this.img = null;
