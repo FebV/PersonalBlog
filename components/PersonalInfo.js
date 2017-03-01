@@ -60,8 +60,8 @@ export default class PersonalInfo extends React.Component{
                 <p>{this.state.pi.education}</p>
                 <p>{this.state.pi.major}</p>
                 <p>{this.state.pi.email}</p>
-                <a>{this.state.pi.github}</a>
-                <a>{this.state.pi.cv}</a>
+                <p style ={{cursor: "pointer", textDecoration: "underline"}} onClick={() => {location.href=this.state.pi.github}}>{this.state.pi.github}</p>
+                <p style ={{cursor: "pointer", textDecoration: "underline"}} onClick={() => {location.href=this.state.pi.cv}}>{this.state.pi.cv}</p>
                 </CardText>
             </Card>
             </MuiThemeProvider>
