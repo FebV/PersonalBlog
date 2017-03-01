@@ -13,7 +13,8 @@ export default class PersonalInfo extends React.Component{
                 name: '',
                 birth: '',
                 education: '',
-                email: ''
+                email: '',
+                cv: '',
             },
         };
         this.img = null;
@@ -59,7 +60,8 @@ export default class PersonalInfo extends React.Component{
                 <p>{this.state.pi.education}</p>
                 <p>{this.state.pi.major}</p>
                 <p>{this.state.pi.email}</p>
-                <p>{this.state.pi.github}</p>
+                <a>{this.state.pi.github}</a>
+                <a>{this.state.pi.cv}</a>
                 </CardText>
             </Card>
             </MuiThemeProvider>
