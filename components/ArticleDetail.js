@@ -16,7 +16,8 @@ export default class ArticleDetail extends React.Component {
         };
         this.style;
         this.tweakPage();
-        this.getArticleDetail();
+        console.log(this.props.params);
+        this.getArticleDetail(this.props.params.articleId);
     }
 
     tweakPage() {
@@ -28,9 +29,9 @@ export default class ArticleDetail extends React.Component {
             }
     }
 
-    async getArticleDetail() {
+    async getArticleDetail(articleId) {
         let article = null;
-        article = await ignitor.data.getArticleDetail(1);
+        article = await ignitor.data.getArticleDetail(articleId);
         this.setState({
             article
         });

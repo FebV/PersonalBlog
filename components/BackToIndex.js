@@ -28,7 +28,7 @@ export default class BackToIndex extends React.Component{
                 }}
                 className="back-to-home"
                 touch={true}
-                tooltip="Bact To Home"
+                tooltip="Back To Index"
                 tooltipPosition="bottom-center"
             />
             </MuiThemeProvider>

@@ -22,7 +22,7 @@ export default class DataController {
                 major: 'Software Engineering',
                 email: 'cn.zhaoyifan@gamil.com'
             };
-        if(this.mode === 'mock') {
+        if(this.mode === 'mock' || this.mode === 'real') {
             return await this.networkController.request('/mockData/personalInfo.json')
         }
     }
@@ -39,7 +39,12 @@ export default class DataController {
                 }
             ];
         if(this.mode === 'mock') {
-            return await this.networkController.request('/mockData/articleList.json')
+            return await this.networkController.request('/mockData/articleList.json');
+        }
+        if(this.mode === 'real') {
+            const response = await this.networkController.request('/api/articles');
+            return response.data;
+            return [];
         }
     }
 
@@ -57,6 +62,10 @@ export default class DataController {
         if(this.mode == 'mock') {
             const result = await this.networkController.request('/mockData/skillBehind.json');
             return result;
+        }
+        if(this.mode == 'real') {
+            const result = await this.networkController.request(`/api/articles/${articleId}`);
+            return result.data;
         }
 
     }

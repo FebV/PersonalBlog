@@ -14,7 +14,13 @@ module.exports = {
         host: '0.0.0.0',
         hot: true,
         inline: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000/',
+                secure: false
+            }
+        }
     },
     module: {
         loaders: [
