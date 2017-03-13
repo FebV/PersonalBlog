@@ -16,7 +16,6 @@ export default class ArticleDetail extends React.Component {
         };
         this.style;
         this.tweakPage();
-        console.log(this.props.params);
         this.getArticleDetail(this.props.params.articleId);
     }
 

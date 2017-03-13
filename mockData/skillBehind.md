@@ -33,3 +33,32 @@ webpack Uglify plugin can compress js into a one-line flie, remove all needless 
 As this website's server is in USA, if a visitor located in China wants to visit it, it can take a huge wait-time during transport from USA to China, across Pacific Ocean. So deploying a CDN in China could be a decent choice for the convience to visitors from China. I use the service provided by su.baidu.com, works effciently.  
 #### Gzip
 With the help of Nginx's Gzip, the weight of my cumbersome bundle.js is reduced to 130K, it's almost acceptable even on mobile phone, and will save the bandwidth of server too.  
+
+## Server Side Arch
+#### Koa2
+Although express framework is the most popular framework written in node, and has a lot of middlewares, it use *callback way* to handle async control flow, which will lead our code to be something like 
+```
+app.use(req, res, next) {
+        connectDB(db, function(conn){
+                conn.find(query, function(result) {
+                        result.isValid(function(bool) {
+                                res.send(bool);
+                        });
+                })
+        })
+}
+```
+It sucks, right? Koa2 use *async/await* (provided by es7) to take over it. Code below can be rewritten into this type:
+```
+app.use(async (ctx, body) => {
+        const conn = await connectDB(db);
+        const result = await conn.find(query);
+        const bool = result.isValid();
+        ctx.body = bool;
+})
+```
+cannot be more cool, seriously.
+#### Log module (self-make)
+I don't find a decent log module on npm, one can record the method, timestamp, Url, srcIP, handling time, request query and response body of every request. It may seem to be too verbose but I need it all to diagnose some potential attack or vulnerable bug. This log module can print those log info into standard output, at the same time it should be able to store those info into some storage like file system or database. So I build one, which can adjust the level of log verbosity, it can also choose how to handle them, print it or store it, or both of them. In the future I will make it as a micro service, listening one port of localhost to decouple the whole system.
+#### ORM model
+I don't know whether the word ORM is correct, I hear and learn ORM from the PHP Lavaral Framework, it use PHP's reflection to construct a ralation between PHP'class and Database's table. But Javascript's object is incredibly flexible, it can add methods and properties on object liberally. But we can also use the thought of ORM to make things more easy to understand.

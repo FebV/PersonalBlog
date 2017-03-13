@@ -12,8 +12,6 @@ import 'whatwg-fetch';
 injectTapEventPlugin();
 
 
-console.log(ignitor.page.direction);
-
 ReactDOM.render(
     (
         <Router history={browserHistory}>

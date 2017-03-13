@@ -26,7 +26,6 @@ export default class ArticleList extends React.Component {
     async getArticleList() {
         const articleList = await ignitor.data.getArticleList();
         this.setState({articleList});
-        console.log(this.state);
     }
 
     render() {
