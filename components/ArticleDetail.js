@@ -26,6 +26,7 @@ export default class ArticleDetail extends React.Component {
             this.style = {
                 width: '70%',
             }
+        this.style.fontFamily = `Roboto, Microsoft Yahei`;
     }
 
     async getArticleDetail(articleId) {
