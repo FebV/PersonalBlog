@@ -14,7 +14,7 @@ export default class ArticleDetail extends React.Component {
             },
             html:''
         };
-        this.style;
+        this.style = {};
         this.tweakPage();
         this.getArticleDetail(this.props.params.articleId);
     }
@@ -23,9 +23,9 @@ export default class ArticleDetail extends React.Component {
         const dir = ignitor.page.direction;
         this.dir = dir;
         if(dir === 'landscape')
-            this.style = {
-                width: '70%',
-            }
+            this.style.width = '70%';
+        if(dir === 'portrait')
+            this.style.width = '100%';
         this.style.fontFamily = `Roboto, Microsoft Yahei`;
     }
 
