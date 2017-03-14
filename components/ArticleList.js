@@ -19,7 +19,7 @@ export default class ArticleList extends React.Component {
         if(dir === 'landscape')
         this.style = {
             width: '50%',
-            height: '50%'
+            height: '50%',
         }
     }
 

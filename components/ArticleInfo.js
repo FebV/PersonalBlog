@@ -17,6 +17,9 @@ export default class ArticleInfo extends React.Component {
     }
 
     tweakPage() {
+        this.style = {
+            fontFamily: 'Roboto, Microsoft Yahei',
+        }
     }
 
     render() {
@@ -24,7 +27,7 @@ export default class ArticleInfo extends React.Component {
             <MuiThemeProvider>
             <Card style={this.style}>
                 {this.image}
-                <h1><CardTitle title={this.props.title} /></h1>
+                <h1><CardTitle title={this.props.title} style={{fontWeight: '400',}} /></h1>
                 <CardText>
                     {ignitor.util.unixToReadableTime(this.props.time)}
                 </CardText>

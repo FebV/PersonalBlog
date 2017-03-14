@@ -1,6 +1,6 @@
 @font-face {
     font-family: Roboto;
-    src: url(Roboto-Light.ttf);
+    src: url(Roboto-Light.woff);
 }
 @font-face {
     font-family: Inconsolata;
@@ -20,7 +20,10 @@
         background-size: cover;
     }
 }
-
+body {
+    letter-spacing: 1;
+    line-height: 2;
+}
 a {
     text-decoration: none;
 }
@@ -33,6 +36,9 @@ code {
     white-space: pre;
     font-family: Inconsolata;
     overflow-x: scroll;
+}
+code::-webkit-scrollbar {
+    display: none;
 }
 .back-to-home {
     position: fixed !important;

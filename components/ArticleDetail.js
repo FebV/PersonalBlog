@@ -46,12 +46,12 @@ export default class ArticleDetail extends React.Component {
     render() {
         return (
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80%'}}>
-            <MuiThemeProvider>
-            <Card style={this.style}>
-                <CardText dangerouslySetInnerHTML={{__html: this.state.html}}></CardText>
-                <CardText>{this.state.time}</CardText>
-            </Card>
-            </MuiThemeProvider>
+                <MuiThemeProvider>
+                <Card style={this.style}>
+                    <CardText dangerouslySetInnerHTML={{__html: this.state.html}}></CardText>
+                    <CardText>{this.state.time}</CardText>
+                </Card>
+                </MuiThemeProvider>
             </div>
         );
     }
