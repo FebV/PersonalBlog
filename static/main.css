@@ -32,6 +32,7 @@ code {
     color: lightblue;
     white-space: pre;
     font-family: Inconsolata;
+    overflow-x: scroll;
 }
 .back-to-home {
     position: fixed !important;
