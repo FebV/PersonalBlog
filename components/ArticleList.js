@@ -1,7 +1,7 @@
 import React from 'react';
 import ArticleInfo from './ArticleInfo';
 import ignitor from '../controllers/Ignitor';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default class ArticleList extends React.Component {
     constructor(props) {

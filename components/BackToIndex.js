@@ -4,7 +4,7 @@ import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { greenA200, red500 } from 'material-ui/styles/colors';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default class BackToIndex extends React.Component{
     render() {

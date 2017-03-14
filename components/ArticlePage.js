@@ -2,11 +2,11 @@ import React from 'react';
 import ArticleDetail from './ArticleDetail';
 import BackToIndex from './BackToIndex';
 
-const ArticlePage = ({params}) => {
+const ArticlePage = ({match}) => {
     return (
     <div>
         <BackToIndex />
-        <ArticleDetail params={params} />
+        <ArticleDetail params={match.params} />
     </div>
     )
 }

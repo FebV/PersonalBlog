@@ -31,6 +31,7 @@ export default class PersonalInfo extends React.Component{
         }
         if(dir === 'portrait') {
         }
+        this.style.lineHeight = 1.2;
     }
 
     async getPersonalInfo() {
@@ -57,7 +58,7 @@ export default class PersonalInfo extends React.Component{
                 <CardText>
                 <p>{this.state.pi.name}</p>
                 <p>{this.state.pi.birth}</p>
-                <p>{this.state.pi.education}</p>
+                <p>{`${this.state.pi.education}`}</p>
                 <p>{this.state.pi.major}</p>
                 <p>{this.state.pi.email}</p>
                 <p style ={{cursor: "pointer", textDecoration: "underline"}} onClick={() => {location.href=this.state.pi.github}}>{this.state.pi.github}</p>
