@@ -16,6 +16,9 @@ export default class ArticleDetail extends React.Component {
         };
         this.style = {};
         this.tweakPage();
+    }
+
+    componentDidMount() {
         this.getArticleDetail(this.props.params.articleId);
     }
 
@@ -32,6 +35,8 @@ export default class ArticleDetail extends React.Component {
     async getArticleDetail(articleId) {
         let article = null;
         article = await ignitor.data.getArticleDetail(articleId);
+        if(!article)
+            return this.setState({html: 'Article Not Found'});
         this.setState({
             article
         });

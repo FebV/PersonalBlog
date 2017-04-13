@@ -20,6 +20,9 @@ export default class PersonalInfo extends React.Component{
         this.img = null;
         this.style = {};
         this.tweakPage();
+    }
+
+    componentDidMount() {
         this.getPersonalInfo();
     }
 

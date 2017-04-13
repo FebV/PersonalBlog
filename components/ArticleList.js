@@ -11,6 +11,9 @@ export default class ArticleList extends React.Component {
             articleList: []
         };
         this.tweakPage();
+    }
+
+    componentDidMount() {
         this.getArticleList();
     }
 

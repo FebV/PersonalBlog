@@ -69,7 +69,19 @@ export default class DataController {
         }
 
     }
+
+    async getCommentByArticleId(id) {
+        const result = await this.networkController.request(`/api/articles/${id}/comments`);
+        return result.data;
+    }
     
+    async postComment(articleId, comment) {
+        console.log(articleId);
+        const result = await this.networkController.post(`/api/articles/${articleId}/comments`,{
+            content: comment,
+        });
+        return result;
+    }
 
 }
 
@@ -83,6 +95,27 @@ class NetworkController {
                 .then(res => res.json())
                 .then(json => {result = json;})
                 .catch(() => {return 'fail'});
+        return result;
+    }
+
+    async post(url, data) {
+        let urlEncoded = '';
+        for(let i in data) {
+            urlEncoded += `&${i}=${data[i]}`;
+        }
+        urlEncoded = urlEncoded.slice(1);
+        let result;
+        await fetch(url, {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: urlEncoded,
+        })
+        .then(res => res.json())
+        .then(json => {
+            result = json;
+        })
         return result;
     }
 }
